@@ -88,9 +88,9 @@ export function getProof(leaves: Buffer[], index: number): Buffer[] {
     return proof;
 }
 
-export function getProofForAnchor(leaves: Buffer[], index: number) {
+export function getProofForAnchor(leaves: Buffer[], index: number): number[][] {
     const proof = getProof(leaves, index);
-    const proofForAnchor = proof.map((buf) => Array.from(buf));
+    const proofForAnchor: number[][] = proof.map((buf) => Array.from(buf));
     return proofForAnchor;
 }
 
