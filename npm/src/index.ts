@@ -1,5 +1,5 @@
 import * as crypto from "node:crypto";
-import bs58 from "npm:bs58";
+import bs58 from "bs58";
 import { Buffer } from "node:buffer";
 
 function sha256(...buffers: Buffer[]): Buffer {

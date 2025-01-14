@@ -33,7 +33,7 @@ exports.getProofForAnchor = getProofForAnchor;
 exports.getLeavesFromClaims = getLeavesFromClaims;
 exports.to32Bytes = to32Bytes;
 exports.toLe8Bytes = toLe8Bytes;
-const crypto = __importStar(require("crypto"));
+const crypto = __importStar(require("node:crypto"));
 const bs58_1 = __importDefault(require("bs58"));
 const node_buffer_1 = require("node:buffer");
 function sha256(...buffers) {

@@ -1,0 +1,32 @@
+{
+  "name": "merkletree-ts-library",
+  "version": "0.1.0",
+  "description": "Merkle Tree Library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HayattiQ/solana-merkletree-ts-library.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HayattiQ/solana-merkletree-ts-library/issues"
+  },
+  "main": "./script/index.js",
+  "module": "./esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "require": "./script/index.js"
+    }
+  },
+  "scripts": {
+    "test": "node test_runner.js"
+  },
+  "dependencies": {
+    "bs58": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "picocolors": "^1.0.0"
+  },
+  "_generatedBy": "dnt@dev"
+}

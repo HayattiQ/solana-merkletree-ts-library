@@ -10,3 +10,4 @@ export interface Claim {
     address: string;
     amount: number;
 }
+//# sourceMappingURL=index.d.ts.map
