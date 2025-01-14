@@ -1,5 +1,6 @@
 import * as crypto from "crypto";
 import bs58 from "bs58";
+import { Buffer } from "node:buffer";
 
 function sha256(...buffers: Buffer[]): Buffer {
     const hasher = crypto.createHash("sha256");
