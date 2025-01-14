@@ -14,8 +14,15 @@ importers:
       crypto:
         specifier: ^1.0.1
         version: 1.0.1
+    devDependencies:
+      '@types/node':
+        specifier: ^22.10.6
+        version: 22.10.6
 
 packages:
+
+  '@types/node@22.10.6':
+    resolution: {integrity: sha512-qNiuwC4ZDAUNcY47xgaSuS92cjf8JbSUoaKS77bmLG1rU7MlATVSiw/IlrjtIyyskXBZ8KkNfjK/P5na7rgXbQ==}
 
   base-x@5.0.0:
     resolution: {integrity: sha512-sMW3VGSX1QWVFA6l8U62MLKz29rRfpTlYdCqLdpLo1/Yd4zZwSbnUaDfciIAowAqvq7YFnWq9hrhdg1KYgc1lQ==}
@@ -27,7 +34,14 @@ packages:
     resolution: {integrity: sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==}
     deprecated: This package is no longer supported. It's now a built-in Node module. If you've depended on crypto, you should switch to the one that's built-in.
 
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+
 snapshots:
+
+  '@types/node@22.10.6':
+    dependencies:
+      undici-types: 6.20.0
 
   base-x@5.0.0: {}
 
@@ -36,3 +50,5 @@ snapshots:
       base-x: 5.0.0
 
   crypto@1.0.1: {}
+
+  undici-types@6.20.0: {}

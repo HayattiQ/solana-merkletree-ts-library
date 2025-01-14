@@ -1,9 +1,14 @@
 {
 	"name": "merkletree-ts-library",
 	"version": "1.0.1",
-	"main": "index.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
 	"dependencies": {
 		"bs58": "^6.0.0",
+		"buffer": "^6.0.3",
 		"crypto": "^1.0.1"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.6"
 	}
 }
