@@ -1,4 +1,6 @@
 {
+	"name": "merkletree-ts-library",
+	"version": "1.0.0",
 	"dependencies": {
 		"bs58": "^6.0.0",
 		"crypto": "^1.0.1"
