@@ -1,5 +1,6 @@
 {
     "imports": {
+      "@deno/dnt": "jsr:@deno/dnt@^0.41.3",
       "bs58": "npm:bs58",
       "crypto": "node:crypto"
     }
