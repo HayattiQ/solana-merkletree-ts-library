@@ -1,3 +1,4 @@
+import { Buffer } from "node:buffer";
 export declare function hashLeaf(pubkey: Buffer, amountLe8: Buffer): Buffer;
 export declare function buildMerkleTree(leaves: Buffer[]): Buffer;
 export declare function getProof(leaves: Buffer[], index: number): Buffer[];

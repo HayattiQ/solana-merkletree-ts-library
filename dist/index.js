@@ -35,6 +35,7 @@ exports.to32Bytes = to32Bytes;
 exports.toLe8Bytes = toLe8Bytes;
 const crypto = __importStar(require("crypto"));
 const bs58_1 = __importDefault(require("bs58"));
+const node_buffer_1 = require("node:buffer");
 function sha256(...buffers) {
     const hasher = crypto.createHash("sha256");
     for (const buf of buffers) {
@@ -47,19 +48,19 @@ function sha256(...buffers) {
 //   node2 = sha256([0] + node1)
 function hashLeaf(pubkey, amountLe8) {
     const node1 = sha256(pubkey, amountLe8);
-    const node2 = sha256(Buffer.from([0]), node1); // LEAF_PREFIX = [0]
+    const node2 = sha256(node_buffer_1.Buffer.from([0]), node1); // LEAF_PREFIX = [0]
     return node2;
 }
 // node = sha256( [1] || (小さい方) || (大きい方) )
 function hashNode(a, b) {
-    if (Buffer.compare(a, b) <= 0) {
+    if (node_buffer_1.Buffer.compare(a, b) <= 0) {
         return crypto.createHash("sha256")
-            .update(Buffer.concat([Buffer.from([1]), a, b]))
+            .update(node_buffer_1.Buffer.concat([node_buffer_1.Buffer.from([1]), a, b]))
             .digest();
     }
     else {
         return crypto.createHash("sha256")
-            .update(Buffer.concat([Buffer.from([1]), b, a]))
+            .update(node_buffer_1.Buffer.concat([node_buffer_1.Buffer.from([1]), b, a]))
             .digest();
     }
 }
@@ -134,10 +135,10 @@ function to32Bytes(pubkeyBase58) {
     if (raw.length !== 32) {
         throw new Error(`Pubkey must be 32 bytes, got ${raw.length}`);
     }
-    return Buffer.from(raw); // Uint8Array を Buffer に変換
+    return node_buffer_1.Buffer.from(raw); // Uint8Array を Buffer に変換
 }
 function toLe8Bytes(num) {
-    const buf = Buffer.alloc(8);
+    const buf = node_buffer_1.Buffer.alloc(8);
     buf.writeBigUInt64LE(BigInt(num));
     return buf;
 }
