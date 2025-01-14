@@ -1,0 +1,6 @@
+{
+    "imports": {
+      "bs58": "npm:bs58",
+      "crypto": "npm:crypto"
+    }
+}
